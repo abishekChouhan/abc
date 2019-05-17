@@ -521,14 +521,15 @@ a {
 }
 
 .project-box{
-	position: absolute;
+    position: absolute;
     width: 90%;
+    height: 90%;
     padding: 0 5%;
 }
 .wrapper-slider{
 	position: relative;
     width: 100%;
-    height: 480px;
+    height: 70%;
     padding: 3% 0% 0% 0%;
     overflow: hidden;
 }
@@ -536,7 +537,7 @@ a {
 .long-holder{
 	position: relative;
     width: 200%;
-    height: 480px;
+    height: 100%;
     background: #e4e2e2;
     left: 0%;
     transition: all 1s;
@@ -544,7 +545,7 @@ a {
 
 .button-holder{
     position: relative;
-    top: -40px;
+    top: -8%;
 }
 .slider-change {
     display: inline-block;
@@ -560,7 +561,7 @@ a {
 	position: relative;
 	width: 380px;
 	padding-bottom: 0px;
-	height: 380px;
+	height: 75%;
 	overflow: hidden;
 	background: url(../img/gradient.jpg);
 	margin: 1.5%;
