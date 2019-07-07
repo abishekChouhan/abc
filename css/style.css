@@ -17,7 +17,7 @@ h1 {
 	font-size: 40px;
 }
 p{
-	font-size: 24px;
+	font-size: 20px;
 }
 a.mr-link:before, a.work-block-link:before{
 	position: absolute;
@@ -271,7 +271,7 @@ a {
 	height: 4px;
 	display: inline-block;
 	animation: updown 1.8s infinite;
-	transition:all .4s ease-in-out;"
+	transition: all .4s ease-in-out;
 }
 
 @keyframes updown {
@@ -322,7 +322,7 @@ a {
 
 #box1{
 	animation: slowzoom 1.3s 1;
-	background-size:;
+	/* background-size:; */
 	background-position: top;
 	transition:all .4s ease-in-out;
 }
@@ -353,39 +353,16 @@ a {
 	width: 90%;
 	padding: 0 5%;
 }
-.bg.with-padding p{
+.bg.with-padding .big-para{
 	position: relative;
 	color: white;
 	z-index: 40; 
 	padding: 3% 0%;
 }
-
-/*
-#box5 {
-	padding-left: 20%; 
-	padding-right: 20%; 
-	width: 60%; 
-	justify-content: center; 
-	text-align: center;
+.bg.with-padding p{
+	padding: 10px 0%;
+	color: white;
 }
-
-
-#layer::before{
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0%;
-	width: 150%;
-	height: 100%;
-	transition: all 2s ease-in-out;
-	animation: slowzo 25s infinite;
-	background-size:;
-	background-position: top;
-	background-color: blue;
-	background: url(../img/gradient.jpg) no-repeat;
-	transition:all .4s ease-in-out;
-}
-*/
 .mr-link {
 	position: relative;
 	top: 20px;
@@ -526,6 +503,9 @@ a {
     height: 90%;
     padding: 0 5%;
 }
+.project-on-mobile{
+	display: none;
+}
 .wrapper-slider{
 	position: relative;
     width: 100%;
@@ -663,7 +643,7 @@ a {
 	padding-right: 5%;
 }
 .skills{
-	width: 50%;
+	width: 55%;
 }
 .education, .skills{
 	float: left;
@@ -686,26 +666,44 @@ a {
 	height: 70px;
 	text-align: center;
 }
+.icon-div:hover {
+	background: black;
+    border-radius: 6px;
+}
 .icon-div span{
 	line-height: 1.5
 }
 .bottom-div{
 	padding: 5% 0;
+	width: 100%;
+	height: 100px;
 }
-.bottom-div p{
-	padding: 5px !important;
-	font-size: 20px;
+.bottom-left{
 	float: left;
+	width: 50%;
+}
+.bottom-left div{
+	padding-left: 40px;
+}
+.bottom-left div a img {
+	float: left;
+	width: 35px;
+	padding-right: 5px;
+}
+.bottom-right{
+	float: right;
 }
 .up-arrow{
 	padding: 10px;
 	width: 50px;
 	background: black;
-	float: right;
 	color: white;
 	text-align: center;
+	cursor: pointer;
 }
-
+.tab1 { 
+	padding-left: 4em; 
+}
 
 .thankyou{
 	position: relative;
@@ -802,37 +800,6 @@ a {
 	text-align:right;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-@media only screen and (min-width: 900px){
-	.circle{
-		opacity: 0;
-	}
-	#desdev{
-		opacity: 0;
-	}
-	
-*/	
-	
-}
 
 @media only screen and (max-width: 1100px){
 	.nav-bar{
@@ -1007,7 +974,7 @@ a {
 		right: 75%;
 	}
 	#circle1 {
-		top: -4%;
+		top: 4%;
 		width: 25%
 	}
 	#circle2 {
@@ -1015,21 +982,21 @@ a {
 		left: 30%;
 	}
 	#circle3 {
-		top: 50%;
+		top: 60%;
 		width: 12%;
 		left: 48%
 	}
 	#circle4 {
-		top:40%;
+		top:60%;
 		width: 20%;
 		left: 5%;
 	}
 	#circle5 {
-		top: 40%;
+		top: 80%;
 		width: 25%;
 	}
 	#circle6 {
-		top: 10%;
+		top: 0%;
 		width: 18%;
 		top: 20%;
 	}
@@ -1069,9 +1036,7 @@ a {
 		 text-align: center; 
 		 color: black;
 	}
-	.bg.with-padding p{
-		font-size: 18px;
-	}
+	
 	.work-box{
 		width: 40%;
 		margin: 9%;
@@ -1178,31 +1143,28 @@ a {
     	margin-bottom: 0px !important;
 	}
 	p {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	h1 {
-		font-size: 32px;
+		font-size: 20px;
+	}
+	h2 {
+		font-size: 14px;
+	}
+	h3 {
+		font-size: 14px;
+	}
+	h4,h5 {
+		font-size: 14px;
+	}
+	span {
+		font-size: 12px;
 	}
 	.box{
 		padding: 10% 0%;
 		width: 100%;
 		margin-top: 7%;
-	}
-	#box2 {
-		height: 300px;
-	}
-	#box4 {
-		height: 360px;
-	}
-	#box5 {
-		padding-right: 10%;
-		padding-left: 10%;
-		width: 80%;
-		height: 700px
-	}
-	#box6 {
-		height: 550px;
-	}
+	}	
 	.nav-bar{
 		height: 60px !important;
 		padding-top: 5px;
@@ -1213,8 +1175,7 @@ a {
 	}
 	.line{
 		height: 3px;
-		width: 50%
-
+		width: 50%;
 	}
 	.row .menu {
 		margin-right: 20px;
@@ -1246,7 +1207,7 @@ a {
 
 	
 	#box1{
-		height: 600px;
+		height: 450px;
 	}
 
 	.bg {
@@ -1265,18 +1226,19 @@ a {
 		display: none;
 		visibility: none;
 	}
-	#mob-agency-info{
-		visibility: visible !important;
-		display: block !important;
-		 position: relative;
-		 top: 500px;
-		 width: 90%; 
-		 height: auto;
-		 font-size: 16px; 
-		 margin-left: 5%; 
-		 margin-right: 5%; 
-		 text-align: center; 
-		 color: black;
+	.skills {
+		width: 100%;
+	}
+	.icon-div {
+		width: 40px;
+		height: 40px;
+		font-size: 12px;
+	}
+	.skill-icon {
+		height: 30px;
+	}
+	.education img {
+		height: 50px;
 	}
 	.work-box{
 		width: 70%;
@@ -1286,72 +1248,27 @@ a {
 	.work-box .work-info{
 		bottom: 20%;
 	}
-	.contact-info{
-		position: relative;
-		margin: 50 5% 0 5%;
-		width: 90%;  
-	    height: auto; 
-	    text-align: center;
-		color: black;
+	.project-box{
+		display: none;
 	}
-	.contact-form {
-		position: relative;
-		margin-top: 20px;
-		width: 100%;
-		justify-content: center;
-		text-align: center;
+	.project-on-mobile{
+		display: block;
 	}
-	.phone-info{
-		position: relative;
-		margin: 50 5% 0 5%;
-		width: 90%; 
-		height: auto; 
-		text-align: center; 
-		color: black;
+	
+	.bg.with-padding p {
+		padding: 5px 0%;
 	}
-	.phone-info h1{
-		font-size: 20px; 
-		
-		font-weight: 600;
+	.bottom-div {
+		padding: 5% 0;
+		height: 140px;
 	}
-	.phone-info h3{
-	 	font-size: 18px; 
-	 	
-	 	font-weight: 400;
+	.bottom-left div{
+		padding-left: 20px;
 	}
-	.thankyou{
-		position: relative;
-		top: 100px; 
-		width: 100%; 
-		height: 75%; 
-		top: 100px; 
-		text-align: center; 
-		z-index: 10;
+	.bottom-left div a img{
+		width: 15px;
+		padding-left: 5px;
 	}
-	.thankyou h1{
-		font-size: 30px; 
-		font-weight: 600;
-	}
-	.thankyou h3{
-		font-size: 18px;
-	}
-	.comments  {
-		padding: 20px 0;
-	}
-	.comments figure div p{
-		font-size: 20;
-	}
-	.footer-small{
-		top: 82%;
-		padding: 0 10%;
-	}
-	.footer-small img{
-		width: 60px;
-	}
-	.footer-small p{
-		font-size: 14;
-	}
-
 	.service{
 		width: 100%;
 		height: 350px;
@@ -1365,43 +1282,6 @@ a {
 	}
 	button{
 		font-size: 10px !important;
-	
+	}
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
