@@ -38,7 +38,7 @@ a.mr-link:hover:before, a.work-block-link:hover:before{
 a {
 	text-decoration: none;
 }
-.nav-bar {
+#nav-bar {
 	position: fixed;
 	z-index: 100;
 	padding-top: 20px;
@@ -49,10 +49,10 @@ a {
 	background-color: none;
 	transition: all .6s ease;
 }
-.containers .nav-bar{
+#nav-bar{
 		height: 85px !important;
 }
-.nav-bar.sticky {
+#nav-bar.sticky {
 	position: fixed;
 	background-color: white;
 	height: 100px;
@@ -104,7 +104,7 @@ a {
 .logo img {
 	width: 100%;
 }
-.row .menu {
+.row #menu {
 	cursor: pointer;
 	margin-right: 100px;
 	margin-top: 15px;
@@ -143,7 +143,7 @@ a {
 }
 
 
-.overlay {
+#overlay {
 	visibility: hidden;
 	opacity: 0;
 	position: fixed;
@@ -153,15 +153,16 @@ a {
 	width: 100%;
 	height: 0;
 	background-color: #222;
+	-webkit-transform: translateZ(0);
 	transition: all .7s cubic-bezier(0.68, -0.03, 0.38, 0.99);
 }	
-.overlay.active{
+#overlay.active{
 	visibility: visible;
 	opacity: .9;
 	height: 100vh;
 	
 }
-.overlay .navigation {
+#overlay .navigation {
 	position: absolute;
 	z-index: 20;
 	margin-top: 0%;
@@ -169,7 +170,7 @@ a {
 	height: 660px;
 	padding: 0;
 }
-.overlay .navigation li{
+#overlay .navigation li{
 	position: relative;
 	text-align: right;
 	list-style-type: none;
@@ -177,41 +178,21 @@ a {
 	margin-left: 10%;
 	margin-right: 10%;
 	border-bottom: 1px solid #525050;
-	transition: all .5s ease;
 }
-.overlay .navigation li a{
+#overlay .navigation li a{
 	position: relative;
 	font-size: 55px;
 	color: white;
 	
 }
-.overlay .navigation li a:before{
-	position: absolute;
-	z-index: 25;
-    top: 45%;
-    float: right;
-    left: 0;
-  	width: 0%;
-  	height: 8px;
-  	background-color: darkcyan;
-  	content: '';
-    display: block; 
-    transition: all 0.3s;
-}
-.overlay .navigation li a:hover:before{
-	width: 100%;
-}
-
-.overlay .navigation li:hover:before {
-	height: 100%;
-}
-.overlay .navigation li a {
-	color: white;
+#overlay .navigation li a:hover{
+	color: grey;
+	
 }	
-.overlay .navigation li:last-child {
+#overlay .navigation li:last-child {
 	border-bottom: 0px solid #525050;
 }
-.overlay .contact-detail {
+#overlay .contact-detail {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -220,7 +201,7 @@ a {
 	height: 160px;
 	padding: 0;
 }
-.overlay .contact-detail li{
+#overlay .contact-detail li{
 	position: relative;
 	z-index: 10;
 	text-align: left;
@@ -230,7 +211,6 @@ a {
 	font-size: 16px;
 	margin-left: 10%;
 	margin-right: 10%;
-	transition: all .5s ease;
 }
 .servicetag{
 	cursor: pointer;
@@ -271,6 +251,7 @@ a {
 	height: 4px;
 	display: inline-block;
 	animation: updown 1.8s infinite;
+	-webkit-transform: translateZ(0);
 	transition: all .4s ease-in-out;
 }
 
@@ -520,7 +501,10 @@ a {
     height: 100%;
     background: #e4e2e2;
     left: 0%;
-    transition: all 1s;
+    transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -o-transition: left 0.5s;
 }
 
 .button-holder{
@@ -530,11 +514,13 @@ a {
 .slider-change {
     display: inline-block;
     height: 12px;
-    width: 12px;
+    width: 22px;
     border-radius: 6px;
     background-color: #716d6d;
 }
-
+.move-left{
+	left: -500px !important;
+}
 .work-box {
 	float: left;
 	border: solid 0px #d8d8d8;
@@ -564,6 +550,7 @@ a {
 }
 .work-box .read-more{
 	position: absolute;
+	cursor: pointer;
 	height: 12%;
 	right: 0;
 	float: right;
@@ -587,26 +574,30 @@ a {
 	position: relative;
 	bottom: 0%;
 }
-#explore1{
-	cursor: pointer;
+.credits{
+	position: absolute;
+	z-index: 20;
+	font-size: 11px;
 }
 .explore-project{
 	background: white;
 	visibility: hidden;
-	width: 0%; 
+	width: 85%; 
 	padding: 3%;
 	margin-top: 2%;
-	height: 90%;
+	height: 0%;
 	position: absolute;
 	z-index: 50;
 	opacity: 1;
 	transition: all 0.7s;
+	-webkit-transition: all 0.4s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
 }
 .show-div{
 	visibility: visible !important;
-	width: 84% !important;
+	height: 85% !important;
 }
-
 .explore-project .text-detail{
 	width: 40%;
 	float: left;
@@ -701,215 +692,33 @@ a {
 	text-align: center;
 	cursor: pointer;
 }
-.tab1 { 
-	padding-left: 4em; 
-}
-
-.thankyou{
-	position: relative;
-	width: 100%; 
-	height: 75%; 
-	text-align: center;
-	color: black;
-	z-index: 10;
-	animation: colorChange2 7s infinite linear;
-}
-.comments{
-	position: relative;
-	height: auto;
-	padding: 40px 0 40px 0;
-	z-index: 12;
-	overflow: hidden;
-}
-.comments figure{
-	position: relative;
-	width: 500%;
-	left: 0;
-	animation: comment 35s linear infinite;
-	-webkit-animation: comment 35s linear infinite;
-}
-@keyframes comment{
-	0% { left: 0 }
-	10% { left: 0% }
-	12%{ left: -100% }
-	22%{ left: -100% }
-	24%{ left: -200% }
-	34%{ left: -200% }
-	36%{ left: -300% }
-	46%{ left: -300% }
-	48%{ left: -400% }
-	58%{ left: -400% }
-	60%{ left: -300% }
-	70%{ left: -300% }
-	72%{ left: -200% }
-	82%{ left: -200% }
-	84%{ left: -100% }
-	94%{ left: -100% }
-	96%{ left: 0% }
-}
-.comments figure div{
-	position: relative;
-	width: 20%;
-	float: left;
-	text-align: center;
-}
-.comments figure div p{
-	font-size: 25px;
-	padding: 0 20px;
-	color: #222;
-}
-.thankyou h1{
-	font-size: 60px;
-	font-weight: 600;
-}
-.thankyou h3{
-	font-size: 20px;
-	font-weight: 600;
-	color: black;
-}
-.social {
-	position: relative;
-	margin: 10px;
-}
-.social span a img{
-	position: relative;
-	margin: 10px;
-	width: 60px;
-
-}
-
-
-
-.footer-small{
-	position: absolute;
-	top: 80%;
-	width: 80%;
-	z-index: 20;
-}
-
-.footer-small img{
-	float: left;
-	margin-right: 10px;
-	width: 80px;
-}
-.footer-small p {
-	color: black;
-	float: right;
-	font-size: 16px;
-	justify-content: right;
-	text-align:right;
-}
 
 
 @media only screen and (max-width: 1100px){
-	.nav-bar{
+	#nav-bar{
 		height: 90px !important;
 	}
-	.container .nav-bar{
+	.container #nav-bar{
 		height: 70px !important;
 	}	
-	.overlay{
+	#overlay{
 		top: 90px !important;
 	}
 	.row .logo {
 		width: 90px;
 		margin-left: 50px;
 	}
-	.row .menu {
+	.row #menu {
 		margin-right: 50px;
 		margin-top: 5px;
 	}
-	
-
 	#desdev{
 		margin-right: 5%;
 		margin-left: 5%;
 		width: 80% !important;
 	}
-	.my-photo{
-		margin-left: 30%;
-		width: 50%;
 		
-	}
-	#my-detail{
-		top: 45%;
-		width: 45%;
-		margin-right: 50%;
-		margin-left: 5%;
-		color: white;
-		font-size: 18px;
-		padding: 10px;
-	}
-	.cre-pas-foc{
-		position: absolute;
-		left: 40%; 
-		bottom: 25%; 
-		z-index: 2;
-		transform: rotate(-90deg); 
-		font-size: 90px;
-		line-height: 100px;
-		
-		list-style: none;
-		color: white;
-		letter-spacing: 5px;
-	}
-	.cre-pas-foc li {
-		opacity: 0;
-	} 
-	.all-service {
-		font-size: 60px;
-
-	}
-	
-
-	.contact-info{
-		position: relative;
-		width: 100%; 
-	    height: auto; 
-	    text-align: center;
-		color: white;
-	}
-	.contact-form {
-		
-		justify-content: center;
-		text-align: center;
-	}
-	.phone-info{
-		position: relative;
-		margin-top: 50px;
-		width: 100%; 
-		height: auto; 
-		text-align: center; 
-		color: black;
-	}
-	.phone-info h1{
-		font-size: 30px; 
-		
-		font-weight: 600;
-	}
-	.phone-info h3{
-	 	font-size: 20px; 
-	 	
-	 	font-weight: 400;
-	}
-	.thankyou{
-		position: relative;
-		top: 100px; 
-		width: 100%; 
-		height: 75%; 
-		top: 100px; 
-		text-align: center;;
-		z-index: 10;
-	}
-	.thankyou h1{
-		font-size: 40px; font-weight: 600;
-	}
-	.thankyou h3{
-		font-size: 30px;
-	}
 }
-
-
 
 @media only screen and (max-width: 900px){
 	h1 {
@@ -922,19 +731,19 @@ a {
 		padding: 8 35 8 35;
 	    font-size: 16px;
 	}
-	.nav-bar{
+	#nav-bar{
 		height: 90px !important;
 	}
-	.container .nav-bar{
+	.container #nav-bar{
 		height: 70px !important;
 	}
-	.overlay .navigation li {
+	#overlay .navigation li {
 		line-height: 1.5;
 	}
-	.overlay .navigation li a{
+	#overlay .navigation li a{
 		font-size: 40px
 	}
-	.overlay{
+	#overlay{
 		top: 90px !important;
 	}
 	.row{
@@ -951,7 +760,7 @@ a {
 		left: 10;
 		margin-left: 0px;
 	}
-	.row .menu {
+	.row #menu {
 		margin-right: 50px;
 		margin-top: 5px;
 	}
@@ -1036,64 +845,33 @@ a {
 		 text-align: center; 
 		 color: black;
 	}
-	
+	#box3 {
+		height: 100%;
+	}
+	.project-box{
+		height: auto;
+	}
+	.wrapper-slider{
+		height: auto;
+	}
+	.long-holder{
+		width: 100%;
+		height: fit-content;
+	}
 	.work-box{
-		width: 40%;
-		margin: 9%;
-		margin-top: 2%;
-		margin-right: 0;
-		height: 350px
+		width: 330px;
+		/*margin-top: 2%;
+		margin-right: 0;*/
+		height: 330px
+	}
+	.button-holder{
+		display: none;
 	}
 	.work-box .work-info{
 		padding-top: 13px;
 	}
 	.work-box .work-info p {
 		font-size: 16px;
-	}
-	.contact-info{
-		position: relative;
-		width: 100%; 
-	    height: auto; 
-	    text-align: center;
-		color: white;
-	}
-	.contact-form {
-		position: relative;
-		
-		justify-content: center;
-		text-align: center;
-	}
-	.phone-info{
-		position: relative;
-		width: 100%; 
-		height: auto; 
-		text-align: center; 
-		color: black;
-	}
-	.phone-info h1{
-		font-size: 20px; 
-		
-		font-weight: 600;
-	}
-	.phone-info h3{
-	 	font-size: 18px; 
-	 	
-	 	font-weight: 400;
-	}
-	.thankyou{
-		position: relative;
-		top: 100px; 
-		width: 100%; 
-		height: 75%; 
-		top: 100px; 
-		text-align: center;
-		z-index: 10;
-	}
-	.thankyou h1{
-		font-size: 30px; font-weight: 600;
-	}
-	.thankyou h3{
-		font-size: 20px;
 	}
 	.servicetag{
 		display: none !important;
@@ -1109,31 +887,6 @@ a {
 		margin-right: auto;
 	}
 	
-	.footer{
-		top: 0;
-		height: 400px;
-	}
-	.footer #drawn-arrow, .footer h3{
-		display: none;
-	} 
-.footer{
-    	top:1250px !important; 
-    }
-
-    /************CONTACT******************/
-    .container{
-    	background-repeat: no-repeat;
-    	background-size: cover !important;
-    }
-    .form-detail{
-    	width: 52% !important;
-    }
-    .phone-detail{
-    	width: 25% !important;
-    }
-    .form-detail p, .phone-detail p{
-    	font-size: 15px;
-    }
 }
 
 
@@ -1165,11 +918,11 @@ a {
 		width: 100%;
 		margin-top: 7%;
 	}	
-	.nav-bar{
+	#nav-bar{
 		height: 60px !important;
 		padding-top: 5px;
 	}
-	.nav-bar .row{
+	#nav-bar .row{
 		top: 10px;
 		height: 40px;
 	}
@@ -1177,7 +930,7 @@ a {
 		height: 3px;
 		width: 50%;
 	}
-	.row .menu {
+	.row #menu {
 		margin-right: 20px;
 	}
 	.row .portfolio-logo {
@@ -1191,36 +944,67 @@ a {
 	    width: 35;
 	    top: -5;		
 	}
-
-	.overlay {
+	#overlay {
 		top: 60px !important;
 	}
-	.overlay .navigation li {
+	#overlay .navigation li {
 		font-size: 30px;
 		line-height: 60px;
 	}
-
-	.overlay .contact-detail {
+	#overlay .contact-detail {
 		margin-top: 75%;
 		
 	}
-
-	
 	#box1{
-		height: 450px;
+		height: 300px;
 	}
-
+	#box1 .bg{
+		height: 250px;
+	}
 	.bg {
 		width: 90%;
 		padding: 5%;
 		height: 450px;
 	}
-
 	#desdev {
-		margin-top: 100px;
-		top: 15%;
+		/*margin-top: 100px;*/
+		top: 10%;
 		transition: none;
 		
+	}
+	#circle1 {
+		width: 15%
+	}
+	#circle2 {
+		width: 18%;
+		left: 30%;
+	}
+	#circle3 {
+		width: 12%;
+	}
+	#circle4 {
+		width: 16%;
+	}
+	#circle5 {
+		width: 20%;
+	}
+	#circle6 {
+		width: 12%;
+	}
+	#circle7 {
+		width: 8%;
+	}
+	#circle8 {
+		width: 14%;
+	}
+	#circle9 {
+		width: 20%;
+	}
+	#circle10 {
+		width: 16%;
+	}
+	#circle11 {
+		width: 12%;
 	}
 	.quote{
 		display: none;
@@ -1240,19 +1024,31 @@ a {
 	.education img {
 		height: 50px;
 	}
+	#box3{
+		height: 120%;
+	}
 	.work-box{
+		float: none;
 		width: 70%;
-		margin: 10%;
+		margin: auto;
+		margin-top: 5%;
 		height: 180px
 	}
 	.work-box .work-info{
-		bottom: 20%;
+		bottom: 0%;
+	}
+	.work-box .read-more {
+		bottom: 15%;
 	}
 	.project-box{
-		display: none;
+		display: block;
+		height: 100%;
+	}
+	.wrapper-slider {
+	    height: 100%;
 	}
 	.project-on-mobile{
-		display: block;
+		display: none;
 	}
 	
 	.bg.with-padding p {
@@ -1282,6 +1078,5 @@ a {
 	}
 	button{
 		font-size: 10px !important;
-	}
-    
+	} 
 }
