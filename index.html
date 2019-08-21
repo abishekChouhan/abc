@@ -1,6 +1,5 @@
 <html>
 <head>
-    {% seo %}
     <title>AbhishekChouhan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -19,20 +18,7 @@
     <!-- <script scr="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.js"></script>
     
-    
-
-    <style>
-        body{
-            /*font-family: 'Ubuntu', sans-serif;
-            font-family: 'Fjalla One', sans-serif;*/
-            font-family: 'Abel', sans-serif;
-        }
-
-        #nav-bar {
-            height: 100px;
-        }
-        
-    </style>
+    {% seo %}
 </head>
 <body>
     <div id="nav-bar" style="/*height: 100px;*/">
@@ -173,17 +159,38 @@
                 </div>
                 <div class="image-detail">
                     <div class="graph-div">
-                        <img src="img/pro1.jpg" width="100%">
+                        <img src="img/kdeplot.jpeg" width="100%">
                     </div>
                     <div>
-                        <a class="mr-link" style="float: right;" href="www.github.com">Explore on github  <i class="devicon-github-plain"></i></a>
+                        <a class="mr-link" style="float: right;" href="https://github.com/abishekChouhan/Air_Quality_analysis_and_prediction">Explore on github  <i class="devicon-github-plain"></i></a>
+                        <div id="collapse1" class=" mr-link collapse">
+                            <img src="img/icon-arrow.png" style="height:25px; float: left">
+                            <span style="float: left;">Back</span>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+
+            <div id="explore2-detail" class="explore-project">
+                <div class="text-detail">
+                    <h1>Movie Map 3D -  Search and Visualize simlar movies in 3D space</h1>
+                    <p><i>A Website that recommends movies by mapping them in a 3d space.<br>The <b>Recommendation System(model)</b> is trained on ~20million ratings given to ~8000 movies by 138000 users. Used Matrix Factorization method to train the model.</i>
+                    <br><br>
+                    For more details explore it on GitHub.
+                    </p>
+                </div>
+                <div class="image-detail">
+                    <div class="graph-div">
+                        <img src="img/movie_map_3d.gif" width="100%">
+                    </div>
+                    <div>
+                        <a class="mr-link" style="float: right;" href="https://github.com/abishekChouhan/movie-map-3d">Explore on github  <i class="devicon-github-plain"></i></a>
                         <div id="collapse1" class=" mr-link collapse">
                             <img src="img/icon-arrow.png" style="height:25px; float: left">
                             <span style="float: left;">Back</span>
                         </div>
                     </div>
                 </div>
-                
             </div>
 
             <div id="explore3-detail" class="explore-project">
@@ -205,8 +212,29 @@
                             <span style="float: left;">Back</span>
                         </div>
                     </div>
+                </div>  
+            </div>
+
+            <div id="explore4-detail" class="explore-project">
+                <div class="text-detail">
+                    <h1>Mission Migrants - Brief study of large scale migrations over the glob</h1>
+                    <p><i></i>
+                    <br><br>
+                    For more details explore it on Kaggle.
+                    </p>
                 </div>
-                
+                <div class="image-detail">
+                    <div class="graph-div">
+                        <img src="img/migrations.png" width="85%">
+                    </div>
+                    <div>
+                        <a class="mr-link" style="float: right;" href="https://www.kaggle.com/abhi310/missingmigrants">Explore on kaggle</a>
+                        <div id="collapse1" class=" mr-link collapse">
+                            <img src="img/icon-arrow.png" style="height:25px; float: left">
+                            <span style="float: left;">Back</span>
+                        </div>
+                    </div>
+                </div>  
             </div>
 
 
@@ -214,7 +242,7 @@
                 <div id="long-holder" class="long-holder">
                     <div class="work-box">
                         <p class="credits">photo:Annalect</p>
-                        <img src="img/visual.jpg" style="position: relative; height: inherit; width: inherit;">
+                        <img src="img/visual.jpg">
                         <div class="work-info">
                         <h3>Visualizing data and making decisions using Python</h3>
                     
@@ -225,10 +253,9 @@
                     </div>
 
                     <div class="work-box">
-                        <p class="credits">photo:Nokia</p>
-                        <img src="img/snake.webp" style="position: relative; height: inherit; width: inherit;">
+                        <img src="img/movie_map_3d.gif">
                         <div class="work-info">
-                            <h3>Reinforcement Lerning -  AI Learns to play Snake Game<br></h3>
+                            <h3>Movie Map 3D -  Search and Visualize simlar movies in 3D space<br></h3>
                         </div>
                         <div id="explore2" class="read-more">
                             <a class="mr-link">Explore</a>
@@ -237,7 +264,7 @@
 
                     <div class="work-box">
                         <p class="credits">photo:Nokia</p>
-                        <img src="img/snake.webp" style="position: relative; height: inherit; width: inherit;">
+                        <img src="img/snake.webp">
                         <div class="work-info">
                             <h3>Reinforcement Lerning -  AI Learns to play Snake Game<br></h3>
                         </div>
@@ -248,9 +275,9 @@
 
                     <div class="work-box">
                         <p class="credits">photo:The New York Times</p>
-                        <img src="img/syria.jpg" style="position: relative; height: inherit; width: inherit;">
+                        <img src="img/syria.jpg">
                         <div class="work-info">
-                        <h3>Mission Migrants<br>(Soon updated here..)</h3>
+                        <h3>Mission Migrants - Brief study of large scale migrations over the glob</h3>
                     
                         </div>
                         <div id="explore4" class="read-more">
@@ -446,10 +473,10 @@
                 $('#box1').addClass('veryactive');
             }); 
 
-            document.getElementById('slider-1').onclick=function(){
+            document.getElementById('slider-1').onmouseover =function(){
                 document.getElementById("long-holder").classList.remove("move-left");
             };
-            document.getElementById('slider-2').onclick=function(){
+            document.getElementById('slider-2').onmouseover =function(){
                 document.getElementById("long-holder").classList.add("move-left");
             };
             
@@ -645,8 +672,14 @@
             document.getElementById('explore1').onclick=function(){
                 document.getElementById("explore1-detail").classList.toggle("show-div");
             };
+            document.getElementById('explore2').onclick=function(){
+                document.getElementById("explore2-detail").classList.toggle("show-div");
+            };
             document.getElementById('explore3').onclick=function(){
                 document.getElementById("explore3-detail").classList.toggle("show-div");
+            };
+            document.getElementById('explore4').onclick=function(){
+                document.getElementById("explore4-detail").classList.toggle("show-div");
             };
             $('.collapse').click(function(){
                 $('.explore-project').removeClass('show-div');

@@ -6,7 +6,10 @@
 body {
 	margin: 0;
 	padding: 0;
-	
+	font-family: 'Abel', sans-serif;
+}
+#nav-bar {
+	height: 100px;
 }
 a {
 	color: black;
@@ -513,8 +516,8 @@ a {
 }
 .slider-change {
     display: inline-block;
-    height: 12px;
-    width: 22px;
+    height: 8px;
+    width: 32px;
     border-radius: 6px;
     background-color: #716d6d;
 }
@@ -537,7 +540,11 @@ a {
 	justify-content: center;
 	color: black;
 }
-
+.work-box img{
+	position: relative;
+	height: inherit;
+	width: inherit;
+}
 .work-box .work-info{
 	position: absolute;
     padding: 10px 5% 10px 5%;
@@ -910,8 +917,8 @@ a {
 	h4,h5 {
 		font-size: 14px;
 	}
-	span {
-		font-size: 12px;
+	.mr-link{
+		padding: 8 28 8 28;
 	}
 	.box{
 		padding: 10% 0%;
@@ -1027,12 +1034,31 @@ a {
 	#box3{
 		height: 120%;
 	}
+	.explore-project .text-detail{
+		width: 100%;
+		height: auto;
+	}
+	.explore-project .image-detail{
+		width: 100%;
+		height: auto;
+		margin-top: 20px;
+	}
+	.explore-project .image-detail .graph-div{
+		height: auto;
+	}
+	.long-holder{
+		height: 100%;
+	}
 	.work-box{
 		float: none;
 		width: 70%;
 		margin: auto;
 		margin-top: 5%;
 		height: 180px
+	}
+	.work-box img{
+		height: inherit;
+		width: 100%;
 	}
 	.work-box .work-info{
 		bottom: 0%;
